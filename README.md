@@ -21,30 +21,31 @@
           android:launchMode="singleTop"
           android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-<activity-alias
-    android:name=".wxapi.WXPayEntryActivity"
-    android:exported="true"
-    android:targetActivity="g3.yeepay.com.qianmaisdk.weixinPay.WXpayCallbackActivity" />
+       <activity-alias
+          android:name=".wxapi.WXPayEntryActivity"
+          android:exported="true"
+          android:targetActivity="g3.yeepay.com.qianmaisdk.weixinPay.WXpayCallbackActivity" />
 
-<!--支付宝支付-->
-<activity
-    android:name="com.alipay.sdk.app.H5PayActivity"
-    android:configChanges="orientation|keyboardHidden|navigation"
-    android:exported="false"
-    android:screenOrientation="behind" >
-</activity>
-<activity
-    android:name="com.alipay.sdk.auth.AuthActivity"
-    android:configChanges="orientation|keyboardHidden|navigation"
-    android:exported="false"
-    android:screenOrientation="behind" >
-</activity>
-(4)发起支付
-4.1微信支付
-/**
-     * 微信支付
-     * @param pay_param 支付服务生成的支付参数
-     */
+       <!--支付宝支付-->
+       <activity
+          android:name="com.alipay.sdk.app.H5PayActivity"
+          android:configChanges="orientation|keyboardHidden|navigation"
+          android:exported="false"
+          android:screenOrientation="behind" >
+       </activity>
+       <activity
+          android:name="com.alipay.sdk.auth.AuthActivity"
+          android:configChanges="orientation|keyboardHidden|navigation"
+          android:exported="false"
+          android:screenOrientation="behind" >
+       </activity>
+
+    (4)发起支付
+       4.1微信支付
+       /**
+        * 微信支付
+        * @param pay_param 支付服务生成的支付参数
+        */
     private void doWXPay(String pay_params){
     String wx_appid=“”;//替换为自己的appid
     WXpay.init(getApplicationContext(),wx_appid);//支付前调用
