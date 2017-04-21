@@ -5,21 +5,21 @@
     Android5.0以上都支持
 
 ## 接入说明 
-（1）将PayPlusSDK、微信SDK、支付宝SDK添加到项目的lib目录下，并引入项目中。
+    （1）将PayPlusSDK、微信SDK、支付宝SDK添加到项目的lib目录下，并引入项目中。
 
-（2）权限说明
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-（3）注册activity
-<!-- 微信支付 -->
-<activity
-    android:name="g3.yeepay.com.qianmaisdk.weixinPay.WXpayCallbackActivity"
-    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-    android:launchMode="singleTop"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    （2）权限说明
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    （3）注册activity
+        <!-- 微信支付 -->
+        <activity
+          android:name="g3.yeepay.com.qianmaisdk.weixinPay.WXpayCallbackActivity"
+          android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+          android:launchMode="singleTop"
+          android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
 <activity-alias
     android:name=".wxapi.WXPayEntryActivity"
