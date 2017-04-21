@@ -79,50 +79,50 @@
         });
     }
     
-     4.2支付宝支付
-     /**
-     * 支付宝支付
-     * @param pay_param 支付服务生成的支付参数
-     */
-     private void doAliPay(String pay_params){
-     new Alipay(this, pay_params, new Alipay.AlipayResultCallBack() {
-         @Override
-         public void onSuccess() {
-             Toast.makeText(getApplication(), "支付成功", Toast.LENGTH_SHORT).show();
-         }
+      4.2支付宝支付
+      /**
+      * 支付宝支付
+      * @param pay_param 支付服务生成的支付参数
+      */
+      private void doAliPay(String pay_params){
+      new Alipay(this, pay_params, new Alipay.AlipayResultCallBack() {
+          @Override
+          public void onSuccess() {
+              Toast.makeText(getApplication(), "支付成功", Toast.LENGTH_SHORT).show();
+          }
 
-         @Override
-         public void onDealing() {
-             Toast.makeText(getApplication(), "支付处理中...", Toast.LENGTH_SHORT).show();
-         }
+          @Override
+          public void onDealing() {
+              Toast.makeText(getApplication(), "支付处理中...", Toast.LENGTH_SHORT).show();
+          }
 
-         @Override
-         public void onError(int error_code) {
-             switch (error_code) {
-                 case Alipay.ERROR_RESULT:
-                     Toast.makeText(getApplication(), "支付失败:支付结果解析错误", Toast.LENGTH_SHORT).show();
-                     break;
+          @Override
+          public void onError(int error_code) {
+              switch (error_code) {
+                  case Alipay.ERROR_RESULT:
+                      Toast.makeText(getApplication(), "支付失败:支付结果解析错误", Toast.LENGTH_SHORT).show();
+                      break;
 
-                 case Alipay.ERROR_NETWORK:
-                     Toast.makeText(getApplication(), "支付失败:网络连接错误", Toast.LENGTH_SHORT).show();
-                     break;
+                  case Alipay.ERROR_NETWORK:
+                      Toast.makeText(getApplication(), "支付失败:网络连接错误", Toast.LENGTH_SHORT).show();
+                      break;
 
-                 case Alipay.ERROR_PAY:
-                     Toast.makeText(getApplication(), "支付错误:支付码支付失败", Toast.LENGTH_SHORT).show();
-                     break;
+                  case Alipay.ERROR_PAY:
+                      Toast.makeText(getApplication(), "支付错误:支付码支付失败", Toast.LENGTH_SHORT).show();
+                      break;
 
-                 default:
-                     Toast.makeText(getApplication(), "支付错误", Toast.LENGTH_SHORT).show();
-                     break;
-             }
-         }
+                  default:
+                      Toast.makeText(getApplication(), "支付错误", Toast.LENGTH_SHORT).show();
+                      break;
+              }
+          }
 
-         @Override
-         public void onCancel() {
-            Toast.makeText(getApplication(), "支付取消", Toast.LENGTH_SHORT).show();
-         }
-     }).doPay();
-     }
+          @Override
+          public void onCancel() {
+             Toast.makeText(getApplication(), "支付取消", Toast.LENGTH_SHORT).show();
+          }
+         }).doPay();
+    }
 
 ## 常见问题说明：
     （1）微信支付不能吊起支付
